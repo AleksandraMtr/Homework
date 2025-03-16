@@ -74,7 +74,6 @@ a {
 }
 
 .games {
-  height: 1470px;
   background: rgb(32, 32, 39);
   background-image: url(image/Stars3.png);
   background-position: 50% 10%;
@@ -88,9 +87,6 @@ a {
   font-weight: 700;
   line-height: 78px;
   margin-bottom: 24px;
-}
-.games__title-mob {
-  display: none;
 }
 .games__tagline {
   color: rgb(255, 255, 255);
@@ -107,7 +103,7 @@ a {
 .games__cardsBlock {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 .games__card {
   width: 378px;
@@ -145,11 +141,75 @@ a {
   line-height: 39px;
   margin: 16px 32px 36px 32px;
 }
-.games__descr {
-  display: none;
+
+.mini-games {
+  background: rgb(32, 32, 39);
+  background-image: url(image/stars-mini-games1.png), url(image/stars-mini-games2.png);
+  background-position: 1300px 80px, 1249px 3366px;
+  background-repeat: no-repeat, no-repeat;
+  padding-top: 46px;
+  padding-bottom: 144px;
 }
-.games__button {
-  display: none;
+.mini-games__title {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  margin-bottom: 56px;
+}
+.mini-games__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mini-games__pic {
+  height: 100%;
+}
+.mini-games__card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+}
+.mini-games__menu {
+  margin: 48px;
+  width: 504px;
+}
+.mini-games__name {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  padding-bottom: 24px;
+}
+.mini-games__descr {
+  color: rgb(32, 32, 39);
+  max-width: 410px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-bottom: 36px;
+}
+.mini-games__button {
+  width: 247px;
+  height: 66px;
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  transition: 1s;
+}
+.mini-games__button:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
 }
 
 .footer {
@@ -197,66 +257,47 @@ a {
     height: 51.34px;
   }
   .games {
-    height: 3740px;
+    display: none;
+  }
+  .mini-games {
     background-image: none;
-    padding-top: 48px;
     padding-bottom: 48px;
+    padding-top: 48px;
   }
-  .games__title {
-    display: none;
-  }
-  .games__tagline {
-    display: none;
-  }
-  .games__title-mob {
-    display: block;
-    color: rgb(255, 255, 255);
+  .mini-games__title {
     font-size: 40px;
     line-height: 49px;
-    text-align: left;
-    padding-bottom: 32px;
+    margin-bottom: 48px;
   }
-  .games__card, .games__pic {
+  .mini-games__card {
+    display: flex;
+    flex-direction: column;
+  }
+  .mini-games__card_rever {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .mini-games__menu {
+    margin: 32px;
+    max-width: 275px;
+  }
+  .mini-games__pic {
     width: 100%;
   }
-  .games__name {
-    margin-bottom: 16px;
+  .mini-games__name {
+    font-size: 32px;
+    line-height: 39px;
+    padding-bottom: 16px;
   }
-  .games__namber {
-    display: none;
-  }
-  .games__descr {
-    display: block;
-    color: rgb(32, 32, 39);
+  .mini-games__descr {
     font-size: 16px;
-    font-weight: 400;
     line-height: 20px;
-    margin-top: 16px;
-    margin-left: 29px;
     padding-bottom: 32px;
   }
-  .games__button {
-    display: block;
+  .mini-games__button {
     width: 285px;
     height: 55px;
-    box-sizing: border-box;
-    border: 1px solid rgb(32, 32, 39);
-    border-radius: 60px;
-    background: rgb(32, 32, 39);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
     font-size: 16px;
-    font-weight: 600;
-    line-height: 141.69%;
-    margin-left: 29px;
-    margin-bottom: 32px;
-    transition: 1s;
-  }
-  .games__button:hover {
-    background: rgb(255, 255, 255);
-    color: rgb(32, 32, 39);
   }
   .footer {
     height: 100px;

@@ -82,7 +82,6 @@ a {
 }
 
 .games {
-  height: 1470px;
   background: $color-text2;
   background-image: url(image/Stars3.png);
   background-position: 50% 10%;
@@ -96,10 +95,6 @@ a {
     font-weight: 700;
     line-height: 78px;
     margin-bottom: 24px;
-  }
-
-  &__title-mob {
-    display: none;
   }
 
   &__tagline {
@@ -119,7 +114,7 @@ a {
   &__cardsBlock {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   }
 
   &__card {
@@ -161,14 +156,85 @@ a {
     line-height: 39px;
     margin: 16px 32px 36px 32px;
   }
+}
 
-  &__descr {
-    display: none;
+.mini-games {
+  background: $color-text2;
+  background-image: url(image/stars-mini-games1.png), url(image/stars-mini-games2.png);
+  background-position: 1300px 80px, 1249px 3366px ;
+  background-repeat: no-repeat, no-repeat;
+  padding-top: 46px;
+  padding-bottom: 144px;
+
+  &__title {
+    color:$color-text1;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    margin-bottom: 56px;
   }
 
-  &__button {
-    display: none;
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
+
+  &__pic {
+    height: 100%;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: $color-text1;
+  }
+
+  &__menu {
+    margin: 48px;
+    width: calc(600px - 96px);
+  }
+
+  &__name {
+    color: $color-text2;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    padding-bottom: 24px;
+  }
+
+    &__descr {
+      color: $color-text2;
+      max-width: 410px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      padding-bottom: 36px;
+    }
+
+    &__button {
+      width: 247px;
+      height: 66px;
+      box-sizing: border-box;
+      border: 1px solid $color-text2;
+      border-radius: 60px;
+      background: $color-text2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-text1;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 141.69%;
+      text-align: center;
+      transition: 1s;
+      }
+  
+    &__button:hover {
+      background:$color-text1;
+      color:$color-text2;
+    }
 }
 
 .footer {
