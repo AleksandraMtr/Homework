@@ -45,20 +45,20 @@
 //  };
 
 
-// let name = prompt("Привет, ИМЯ!");
-// alert (name);
+// let name = prompt("Как тебя зовут?");
+// alert (`Привет, ${name}`);
 
 
 // Дополнительное задание:
 
-let number = prompt("Загадай любое число");
-alert (number);
-let num = 5;
-num *= 2;
-num += 10;
-num /= 2;
-num -= 5;
-alert (num);
+// let number = prompt("Загадай любое число");
+// alert (number);
+// let num = 5;
+// num *= 2;
+// num += 10;
+// num /= 2;
+// num -= 5;
+// alert (num);
 
 
 
