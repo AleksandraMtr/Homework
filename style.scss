@@ -118,7 +118,7 @@ a {
   }
 
   &__card {
-    width: 378px;
+    max-width: 378px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -253,4 +253,5 @@ a {
 }
 
 @import "mobile";
+// @import "tablet";
 
