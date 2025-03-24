@@ -1,12 +1,4 @@
 // Задание 1
-// let i = 1;
-// while (i <= 2) {
-//     console.log("Привет");
-//     i++;
-// }
-
-// или
-
 // for (let i = 1; i <=2; i++) {
 //     console.log("Привет");
 // }
@@ -43,7 +35,8 @@
 //     num++;
 // }
 // console.log(`Количество циклов:${num}`);
-// 
+
+
 
 // Задание 6
 // let firstFriday = 2; 
@@ -51,7 +44,6 @@
 // for (let day = firstFriday; day <= 31; day += 7) {
 //     console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
 // }
-
 
 
 // Доп.задание 1
@@ -78,7 +70,7 @@
 //  Название: `Вафельное сердце`,
 //  Автор: `Мария Парр`,
 //  "Год издания": `2005`,
-//  Жанр: `Детская литература`,
+//  Жанр: `Детская литература`
 // }
 // for (let key in book) {
 //     console.log(`${key}: ${book[key]})`);
@@ -88,7 +80,7 @@
 // let numbers = [4,8,24,678,76,4,94,59,65,10];
 // let minimum = numbers[0];
 
-// for (const item of numbers) {
+// for (let item of numbers) {
 //   if(item < minimum) {
 //     minimum = item; 
 //   }
