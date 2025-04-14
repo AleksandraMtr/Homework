@@ -40,6 +40,42 @@ function makeGuess() {
     }
 }
 
+document.getElementById("startGame1").addEventListener("click", startGame);
 
-document.getElementById("startButton").addEventListener("click", startGame);
 
+let score = 0;
+
+function startMathGame() {
+    const operations = ['+','-','*','/'];
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+
+    const num1 = Math.floor(Math.random() * 10);
+    const num2 = Math.floor(Math.random() * 10); 
+    const correctAnswer = eval(`${num1} ${operation} ${num2}`); 
+
+    const question = `Сколько будет ${num1} ${operation} ${num2}?`;
+    const userAnswer = prompt(question);
+    
+    if (userAnswer === null) {
+        alert('Игра завершена!');
+        return;
+    }
+
+    const isCorrect = Math.abs(parseFloat(userAnswer) - correctAnswer) < 0.01;
+
+    if (isCorrect) {
+        score += 10;
+        alert('Верно!');
+    } else {
+        alert(`Неверно! Правильный ответ: ${correctAnswer.toFixed(2)}`);
+        }
+
+        const playAgain = confirm('Хотите продолжить?');
+    if (playAgain) {
+        startMathGame();
+    } else {
+        alert(`Игра завершена! Ваш счёт: ${score}`);
+    }
+}
+
+document.getElementById("startGame2").addEventListener("click", startMathGame);
