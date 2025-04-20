@@ -22,7 +22,7 @@ a {
   background: $color-background;
   background-image: url(image/stars1.png), url(image/Stars2.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: 170% 80%, 4% 10%;  
+  background-position: calc(100% + 400px) calc(100% + 20px), calc(100% - 1250px) calc(100% - 600px);  
 
 }
 
@@ -177,7 +177,7 @@ a {
   &__cards {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
   }
 
   &__pic {
