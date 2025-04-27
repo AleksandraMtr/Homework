@@ -101,7 +101,7 @@ document
 // ЧЕТВЕРТАЯ ИГРА(Викторина)
 const quiz = [
   {
-    question: "Какой цвет небо?",
+    question: "Какой цвет у неба?",
     options: ["1. Красный", "2. Синий", "3. Зеленый"],
     correctAnswer: 2,
   },
@@ -139,3 +139,46 @@ function startVictoryGame() {
 document
   .getElementById("startGame4")
   .addEventListener("click", startVictoryGame);
+
+
+// ПЯТАЯ ИГРА (Камень, ножницы, бумага)
+
+function startKNBGame() {
+  const choices = ["камень", "ножницы", "бумага"];
+  
+  const userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
+  
+  if (!choices.includes(userChoice)) {
+      alert("Пожалуйста, выберите один из вариантов: камень, ножницы или бумага");
+      return;
+  }
+  
+  const randomIndex = Math.floor(Math.random() * 3);
+  const computerChoice = choices[randomIndex];
+
+  
+  if (userChoice === computerChoice) {
+      alert(`"Ничья!"
+      Ваш выбор: ${userChoice}
+      Выбор компьютера: ${computerChoice}
+      `);
+  } else if (
+      (userChoice === "камень" && computerChoice === "ножницы") ||
+      (userChoice === "ножницы" && computerChoice === "бумага") ||
+      (userChoice === "бумага" && computerChoice === "камень")
+  ) {
+      alert(`"Вы победили!" 
+      Ваш выбор: ${userChoice}
+      Выбор компьютера: ${computerChoice}
+      `);
+  } else {
+      alert(`"Компьютер победил!"
+      Ваш выбор: ${userChoice}
+      Выбор компьютера: ${computerChoice}
+      `);
+  }
+};
+
+document
+  .getElementById("startGame5")
+  .addEventListener("click", startKNBGame);
